@@ -28,12 +28,14 @@
   "homepage": "https://github.com/dimasriat/subgraph-to-puml#readme",
   "dependencies": {
     "commander": "^11.0.0",
-    "figlet": "^1.6.0"
+    "figlet": "^1.6.0",
+    "pako": "^2.1.0"
   },
   "devDependencies": {
     "@types/figlet": "^1.5.6",
     "@types/node": "^20.4.7",
-    "typescript": "^5.1.6",
-    "chalk": "^4.1.2"
+    "@types/pako": "^2.0.0",
+    "chalk": "^4.1.2",
+    "typescript": "^5.1.6"
   }
 }

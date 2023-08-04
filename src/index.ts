@@ -5,6 +5,7 @@ import { Command } from "commander";
 import figlet from "figlet";
 import { readFile, writeFile } from "fs/promises";
 import path from "path";
+import { compress } from "./deflate";
 import { Schema } from "./schema";
 
 async function main() {
@@ -31,9 +32,14 @@ async function main() {
       path.dirname(filePath),
       path.basename(filePath, ".graphql") + ".puml"
     );
+
+    const pumlUrl =
+      "http://www.plantuml.com/plantuml/png/~1" + compress(pumlSourceCode);
+
     await writeFile(pumlPath, pumlSourceCode, { encoding: "utf-8" });
 
     console.log("Output file:", chalk.redBright(pumlPath));
+    console.log("Preview PlantUML URL:", chalk.blueBright(pumlUrl));
   }
 
   if (!process.argv.slice(2).length) {
