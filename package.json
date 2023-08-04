@@ -1,14 +1,31 @@
 {
   "name": "subgraph-to-puml",
-  "version": "1.0.0",
-  "description": "",
+  "version": "0.1.0",
+  "description": "A program to visualize GraphQL schema of The Graph Protocol Subgraph.",
   "main": "dist/index.js",
   "scripts": {
     "build": "npx tsc"
   },
-  "keywords": [],
-  "author": "",
+  "bin": {
+    "subgraph-to-puml": "./dist/index.js"
+  },
+  "keywords": [
+    "cli",
+    "thegraph",
+    "subgraph",
+    "schema",
+    "puml",
+    "uml",
+    "flow",
+    "web3",
+    "ethereum",
+    "blockchain",
+    "visualizer"
+  ],
+  "author": "Dimas",
   "license": "ISC",
+  "repository": "https://github.com/dimasriat/subgraph-to-puml",
+  "homepage": "https://github.com/dimasriat/subgraph-to-puml#readme",
   "dependencies": {
     "commander": "^11.0.0",
     "figlet": "^1.6.0"
